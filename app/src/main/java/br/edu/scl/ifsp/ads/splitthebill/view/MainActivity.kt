@@ -44,6 +44,14 @@ class MainActivity : AppCompatActivity() {
             }
             startActivityForResult(intent, 2)
         }
+
+        personLv.setOnItemClickListener{ parent, view, position, id ->
+            val contact = personList[position]
+            val viewContactIntent = Intent(this, PersonActivity::class.java)
+            viewContactIntent.putExtra(EXTRA_PERSON, contact)
+            viewContactIntent.putExtra(VIEW_PERSON, true)
+            startActivity(viewContactIntent)
+        }
     }
 
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
