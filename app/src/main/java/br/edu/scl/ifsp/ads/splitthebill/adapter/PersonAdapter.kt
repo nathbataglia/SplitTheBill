@@ -20,11 +20,15 @@ class PersonAdapter(
         val nomeTv = rowView.findViewById<TextView>(R.id.nomeTv)
         val totalGastoTv = rowView.findViewById<TextView>(R.id.totalGastoTv)
         val debitTv = rowView.findViewById<TextView>(R.id.debitoTv)
+        val descricaoTv = rowView.findViewById<TextView>(R.id.descricaoTv)
 
         val person = personList[position]
 
         nomeTv.text = person.nome
         totalGastoTv.text = "Gastou: R$ ${"%.2f".format(person.totalGasto)}"
+
+        val itensComprados = person.itensComprados.joinToString(", ")
+        descricaoTv.text = "Itens Comprados: $itensComprados"
 
         if (person.debito < 0) {
             debitTv.text = "Deve: R$ ${"%.2f".format(person.debito * -1)}"
