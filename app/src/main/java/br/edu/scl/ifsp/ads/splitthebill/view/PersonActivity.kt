@@ -45,7 +45,7 @@ class PersonActivity : AppCompatActivity() {
             id = personId,
             nome = nome,
             valorGasto = valorGasto,
-            debito = 0.0, // This will be calculated in MainActivity
+            debito = 0.0,
             descricao = descricao
         )
 

@@ -84,10 +84,10 @@ class MainActivity : AppCompatActivity() {
             val person = data.getParcelableExtra<Person>(EXTRA_PERSON) ?: return
 
             if (requestCode == 1) {
-                // Add new person
+                // Adiciona
                 personList.add(person)
             } else if (requestCode == 2) {
-                // Edit person
+                // Edita
                 val index = personList.indexOfFirst { it.id == person.id }
                 if (index != -1) {
                     personList[index] = person
