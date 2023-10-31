@@ -16,6 +16,8 @@ class PersonActivity : AppCompatActivity() {
     private lateinit var valorGastoEt: EditText
     private lateinit var descricaoEt: EditText
 
+    private var originalPerson: Person? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_person)
@@ -24,11 +26,11 @@ class PersonActivity : AppCompatActivity() {
         valorGastoEt = findViewById(R.id.valorGastoEt)
         descricaoEt = findViewById(R.id.descricaoEt)
 
-        val person = intent.getParcelableExtra<Person>(EXTRA_PERSON)
-        if (person != null) {
-            nomeEt.setText(person.nome)
-            valorGastoEt.setText(person.valorGasto.toString())
-            descricaoEt.setText(person.descricao)
+        originalPerson = intent.getParcelableExtra<Person>(EXTRA_PERSON)
+        if (originalPerson != null) {
+            nomeEt.setText(originalPerson!!.nome)
+            valorGastoEt.setText(originalPerson!!.valorGasto.toString())
+            descricaoEt.setText(originalPerson!!.descricao)
         }
     }
 
@@ -37,8 +39,10 @@ class PersonActivity : AppCompatActivity() {
         val valorGasto = valorGastoEt.text.toString().toDouble()
         val descricao = descricaoEt.text.toString()
 
+        val personId = originalPerson?.id ?: System.currentTimeMillis().toInt()
+
         val person = Person(
-            id = System.currentTimeMillis().toInt(),
+            id = personId,
             nome = nome,
             valorGasto = valorGasto,
             debito = 0.0, // This will be calculated in MainActivity
