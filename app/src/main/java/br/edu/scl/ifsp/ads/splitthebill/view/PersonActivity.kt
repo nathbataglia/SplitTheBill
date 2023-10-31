@@ -46,6 +46,8 @@ class PersonActivity : AppCompatActivity() {
             valorGastoEt2.setText(originalPerson!!.valorGasto2.toString())
             valorGastoEt3.setText(originalPerson!!.valorGasto3.toString())
             descricaoEt.setText(originalPerson!!.descricao)
+            descricaoEt2.setText(originalPerson!!.descricao2)
+            descricaoEt3.setText(originalPerson!!.descricao3)
         }
     }
 
@@ -72,6 +74,8 @@ class PersonActivity : AppCompatActivity() {
             totalGasto = totalGasto,
             debito = 0.0,
             descricao = descricao,
+            descricao2 = descricao2,
+            descricao3 = descricao3,
             itensComprados = listOf(descricao, descricao2, descricao3)
         )
 
