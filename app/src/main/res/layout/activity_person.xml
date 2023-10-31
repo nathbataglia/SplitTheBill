@@ -29,6 +29,34 @@
         android:hint="Descrição compra"
         android:inputType="text" />
 
+    <EditText
+        android:id="@+id/valorGastoEt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor pago"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/descricaoEt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição compra"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/valorGastoEt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor pago"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/descricaoEt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição compra"
+        android:inputType="text" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -100,11 +100,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateDebits() {
-        val totalSpent = personList.sumByDouble { it.valorGasto }
+        val totalSpent = personList.sumByDouble { it.totalGasto }
+
         val equalShare = totalSpent / personList.size
 
         for (person in personList) {
-            person.debito = person.valorGasto - equalShare
+            person.debito = person.totalGasto - equalShare
         }
     }
 }

@@ -14,7 +14,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/valorGastoTv"
+        android:id="@+id/totalGastoTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pagou: R$0.00"
@@ -26,5 +26,12 @@
         android:layout_height="wrap_content"
         android:text="Deve/Receber: R$0.00"
         android:textSize="16sp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/descricaoTv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="O que comprou:"-->
+<!--        android:textSize="16sp" />-->
 
 </LinearLayout>

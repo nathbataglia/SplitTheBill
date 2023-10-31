@@ -18,13 +18,13 @@ class PersonAdapter(
         val rowView = inflater.inflate(R.layout.tile_person, null, true)
 
         val nomeTv = rowView.findViewById<TextView>(R.id.nomeTv)
-        val valorGastoTv = rowView.findViewById<TextView>(R.id.valorGastoTv)
+        val totalGastoTv = rowView.findViewById<TextView>(R.id.totalGastoTv)
         val debitTv = rowView.findViewById<TextView>(R.id.debitoTv)
 
         val person = personList[position]
 
         nomeTv.text = person.nome
-        valorGastoTv.text = "Gastou: R$ ${"%.2f".format(person.valorGasto)}"
+        totalGastoTv.text = "Gastou: R$ ${"%.2f".format(person.totalGasto)}"
 
         if (person.debito < 0) {
             debitTv.text = "Deve: R$ ${"%.2f".format(person.debito * -1)}"
@@ -33,7 +33,6 @@ class PersonAdapter(
             debitTv.text = "Receber: R$ ${"%.2f".format(person.debito)}"
             debitTv.setTextColor(context.resources.getColor(android.R.color.holo_green_dark))
         }
-
 
         return rowView
     }

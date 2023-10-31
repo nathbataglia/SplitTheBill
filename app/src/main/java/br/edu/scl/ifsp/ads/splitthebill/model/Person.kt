@@ -8,13 +8,22 @@ data class Person(
     val id: Int,
     val nome: String,
     val valorGasto: Double,
+    val valorGasto2: Double,
+    val valorGasto3: Double,
+    val totalGasto: Double,
     var debito: Double,
-    val descricao: String
+    val descricao: String,
+    val itensComprados: List<String>
 ) : Parcelable {
     constructor(id: Int,
                 nome: String,
                 valorGasto: String,
+                valorGasto2: String,
+                valorGasto3: String,
+                totalGasto: String,
                 debito: String,
-                descricao: String)
-            : this(id, nome, valorGasto.toDouble(), debito.toDouble(), descricao)
+                descricao: String,
+                itensComprados: List<String>)
+            : this(id, nome, valorGasto.toDouble(), valorGasto2.toDouble(), valorGasto3.toDouble(),
+        totalGasto.toDouble(), debito.toDouble(), descricao, itensComprados)
 }
