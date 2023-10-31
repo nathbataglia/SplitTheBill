@@ -8,8 +8,10 @@ import android.widget.TextView
 import br.edu.scl.ifsp.ads.splitthebill.R
 import br.edu.scl.ifsp.ads.splitthebill.model.Person
 
-class PersonAdapter(private val context: Activity, private val personList: List<Person>) :
-    ArrayAdapter<Person>(context, R.layout.tile_person, personList) {
+class PersonAdapter(
+    private val context: Activity,
+    private val personList: List<Person>
+) : ArrayAdapter<Person>(context, R.layout.tile_person, personList) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater

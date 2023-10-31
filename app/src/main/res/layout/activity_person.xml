@@ -19,14 +19,14 @@
         android:id="@+id/valorGastoEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Valor Gasto"
+        android:hint="Valor pago"
         android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/descricaoEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descrição"
+        android:hint="Descrição compra"
         android:inputType="text" />
 
     <Button

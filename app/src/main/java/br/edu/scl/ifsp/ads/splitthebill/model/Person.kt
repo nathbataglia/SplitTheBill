@@ -11,7 +11,10 @@ data class Person(
     var debito: Double,
     val descricao: String
 ) : Parcelable {
-    // A secondary constructor to help in creating instances
-    constructor(id: Int, nome: String, valorGasto: String, debito: String, descricao: String)
+    constructor(id: Int,
+                nome: String,
+                valorGasto: String,
+                debito: String,
+                descricao: String)
             : this(id, nome, valorGasto.toDouble(), debito.toDouble(), descricao)
 }
